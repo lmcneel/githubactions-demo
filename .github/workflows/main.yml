@@ -6,20 +6,20 @@ on:
       - develop
       - staging
   
-  jobs:
-    runs-on: ubuntu-latest
+jobs:
+  runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-      - name: Use Node.js 21.x
-        uses: actions/setup-node@v4
-        with:
-          node-version: 21.x
+    - name: Use Node.js 21.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: 21.x
 
-      - name: Install dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install
 
-      - name: Lint code
-        run: npm run lint
+    - name: Lint code
+      run: npm run lint
