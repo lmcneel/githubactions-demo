@@ -5,7 +5,7 @@ on:
     branches:
       - develop
       - staging
-  
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -24,3 +24,9 @@ jobs:
 
       - name: Lint code
         run: npm run lint
+
+      - name: Run build
+        run: npm run build
+
+      - name: Run tests
+        run: npm run test
